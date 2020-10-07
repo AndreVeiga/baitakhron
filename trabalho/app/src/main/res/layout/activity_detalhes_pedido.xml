@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_height="match_parent"
+    tools:context=".DetalhesPedido">
+
+    <LinearLayout
+        android:id="@+id/detalhes_pedido_header"
+        android:layout_width="match_parent"
+        android:gravity="center"
+        android:padding="5dp"
+        android:layout_height="wrap_content">
+        <TextView
+            android:id="@+id/txt_title"
+            android:text="Mesa {0} - Detalhes do pedido"
+            android:layout_width="wrap_content"
+            android:textSize="20sp"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+
+    <LinearLayout
+            android:orientation="vertical"
+            android:id="@+id/detalhes_pedido_body_empty"
+            android:layout_below="@+id/detalhes_pedido_header"
+            android:layout_width="match_parent"
+            android:gravity="center"
+            android:visibility="gone"
+            android:layout_height="match_parent">
+
+        <View
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:background="@drawable/carrinho_vazio" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="32sp"
+            android:textStyle="bold"
+            android:textColor="#777"
+            android:text="Pedido Vazio"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/detalhes_pedido_body"
+        android:layout_below="@+id/detalhes_pedido_header"
+        android:orientation="vertical"
+        android:padding="30dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="horizontal"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="20sp"
+                android:text="Valor Total: R$ "/>
+
+            <TextView
+                android:id="@+id/lbl_valorTotal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="20sp"
+                android:text="0"/>
+
+
+
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textStyle="italic"
+            android:text="Gorjeta opcional 10%"/>
+
+        <ListView
+            android:id="@+id/lista_produtos_detalhes"
+            android:layout_width="match_parent"
+            android:layout_marginBottom="75dp"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/container_btn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:padding="10dp"
+        android:gravity="center">
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="15dp"
+            android:onClick="abrirListaDePratos"
+            android:background="#F00"
+            android:textColor="#FFF"
+            android:text="+ pratos"/>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:background="#F00"
+            android:onClick="abrirListaDeBebidas"
+            android:textColor="#FFF"
+            android:text="+ bebidas"/>
+    </LinearLayout>
+
+</RelativeLayout>

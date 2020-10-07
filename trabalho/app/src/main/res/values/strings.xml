@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">BaitaKrohn</string>
+    <string name="activity_main_btn_one">Gerenciar cardápio</string>
+    <string name="activity_main_btn_two">Gerenciar pedidos</string>
+</resources>

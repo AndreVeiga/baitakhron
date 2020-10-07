@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:padding="20dp"
+        android:layout_height="match_parent">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="15dp"
+        android:layout_marginBottom="45dp"
+        android:textSize="24sp"
+        android:text="Pagamento"/>
+
+    <TextView
+        android:id="@+id/pagamento_mesa"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="16sp"
+        android:layout_marginBottom="30dp"
+        android:text="Mesa: "/>
+
+    <TextView
+        android:id="@+id/pagamento_total_pratos"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="30dp"
+        android:textSize="16sp"
+        android:text="Valor total (pratos): "/>
+
+    <TextView
+        android:id="@+id/pagamento_total_bebidas"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="30dp"
+        android:textSize="16sp"
+        android:text="Valor total (bebidas): "/>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:paddingBottom="10dp"
+        android:paddingTop="10dp"
+        android:gravity="center"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="16sp"
+            android:text="Sem gorjeta"/>
+
+        <Switch
+            android:id="@+id/gorjeta"
+            android:layout_width="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:onClick="adicionarGorjeta"
+            android:layout_marginRight="10dp"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="16sp"
+            android:text="Com gorjeta (10%)"/>
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/pagamento_total_nota"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:layout_marginBottom="50dp"
+        android:textSize="16sp"
+        android:text="Valor total da nota: "/>
+
+    <Button
+        android:layout_width="150dp"
+        android:layout_height="50dp"
+        android:background="@color/colorPrimary"
+        android:textColor="#FFF"
+        android:textSize="18sp"
+        android:onClick="finalizarPedido"
+        android:layout_gravity="center"
+        android:text="Pagar"/>
+    </LinearLayout>
+</ScrollView>

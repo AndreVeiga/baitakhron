@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:padding="30dp"
+    android:layout_height="wrap_content">
+
+    <TextView
+        android:id="@+id/nome_produto"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:textSize="24sp"
+        android:text="teste"/>
+
+    <Button
+        android:id="@+id/quantidade_menos"
+        android:text=" - "
+        android:layout_width="60dp"
+        android:layout_height="40dp"/>
+
+    <TextView
+        android:id="@+id/quantidade_produto"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="22sp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:text="0"/>
+
+    <Button
+        android:id="@+id/quantidade_mais"
+        android:text=" + "
+        android:layout_width="60dp"
+        android:layout_height="40dp"/>
+
+</LinearLayout>
